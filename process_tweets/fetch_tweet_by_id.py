@@ -16,6 +16,7 @@ class Fetch_Tweet_By_ID():
         # init twitter api key in
         __auth = tweepy.OAuthHandler(__CONSUMER_KEY, __CONSUMER_SECRET)
         __auth.set_access_token(__OAUTH_TOKEN, __OAUTH_TOKEN_SECRET)
+
         self.api = tweepy.API(__auth,
                               wait_on_rate_limit_notify=True,
                               wait_on_rate_limit=True)
